@@ -27,7 +27,7 @@ async function generate() {
 
             return `
               <url>
-                  <loc>${`https://www.subsgain.in/${route}`}</loc>
+                  <loc>${`https://www.subsgain.in${route}`}</loc>
               </url>
             `
           })
