@@ -1,17 +1,17 @@
 import Head from 'next/head'
 function Meta({ title, keywords, description }) {
   return (
-    <div>
+    <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="keywords" content={keywords} />
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
-      <meta property="og:title" content={`${title} - Subs Gain`} />
+      <meta property="og:title" content={`Subs Gain - ${title}`} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <link rel="icon" href="/favicon.ico" />
-      <title>{title}</title>
-    </div>
+      <link rel="icon" href="/logo.png" />
+      <title>{`Subs Gain - ${title}`}</title>
+    </Head>
   )
 }
 

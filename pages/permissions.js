@@ -4,7 +4,7 @@ import PermissionBody from '../components/PermissionBody'
 function permissions() {
   return (
     <div>
-      <Meta title="Subs Gain - Permissions" />
+      <Meta title="Permissions" />
       <PermissionBody />
     </div>
   )

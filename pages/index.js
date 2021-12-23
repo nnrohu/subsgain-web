@@ -5,7 +5,7 @@ import Meta from '../components/Meta'
 export default function Home() {
   return (
     <div>
-      <Meta title="Subs Gain - Home" />
+      <Meta title="Home" />
       <HomeBody />
     </div>
   )

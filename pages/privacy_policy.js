@@ -3,7 +3,7 @@ import Meta from '../components/Meta'
 function PrivacyPolicy() {
   return (
     <div className="flex p-8">
-      <Meta title="Subs Gain - PrivacyPolicy" />
+      <Meta title="PrivacyPolicy" />
       <div>
         <p>
           <strong>Privacy Policy</strong>

@@ -4,11 +4,7 @@ import Meta from './Meta'
 function Layout({ children }) {
   return (
     <>
-      <Meta
-        title="Subs Gain - Home"
-        keywords="youtube subs, free subs for youtube, sub gain, subsgain, subs gain"
-        description="Subs Gain | Boost Subscriber offers a platform to share videos and channels."
-      />
+      <Meta title="Subs Gain" />
       <Nav />
       <div>
         <main>{children}</main>

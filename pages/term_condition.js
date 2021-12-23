@@ -3,7 +3,7 @@ import Meta from '../components/Meta'
 function TermAndCondition() {
   return (
     <div className="flex p-8">
-      <Meta title="Subs Gain - TermAndCondition" />
+      <Meta title="TermAndCondition" />
       <div>
         <p>
           <strong>Terms &amp; Conditions</strong>
