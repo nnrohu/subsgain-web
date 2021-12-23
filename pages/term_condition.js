@@ -3,11 +3,7 @@ import Meta from '../components/Meta'
 function TermAndCondition() {
   return (
     <div className="flex p-8">
-      <Meta
-        title="Subs Gain - Home"
-        keywords="youtube subs, free subs for youtube, sub gain, subsgain, subs gain"
-        description="Subs Gain | Boost Subscriber offers a platform to share videos and channels."
-      />
+      <Meta title="Subs Gain - TermAndCondition" />
       <div>
         <p>
           <strong>Terms &amp; Conditions</strong>
