@@ -6,8 +6,8 @@ function Layout({ children }) {
     <>
       <Meta title="Subs Gain" />
       <Nav />
-      <div>
-        <main>{children}</main>
+      <div className='middleLayout'>
+        {children}
       </div>
       <Footer />
     </>

@@ -1,21 +1,25 @@
 import Link from 'next/link'
-
+import Image from "next/image";
+import logo from "../public/logo.png"
 function Nav() {
   return (
-    <nav className="bg-white px-6 relative shadow-md">
-      <div className="flex flex-row justify-between items-center py-2">
+    <nav className="header">
+    <div className="container">
+    <div className="logo">
         <Link href="/">
-          <div className="flex flex-row items-center">
-            <img
-              src="/logo.png"
+          <a>
+            <Image
+              src={logo}
               alt="download from google play"
-              width="50"
-              height="50"
+              width={64}
+              height={64}
+              layout="intrinsic"
             />
-            <h3 className="font-semibold text-2xl text-gray-600">Subs Gain</h3>
-          </div>
+            <span>Subs Gain</span>
+            </a>
         </Link>
-        <div className="group flex flex-col items-center">
+        </div>
+        <div className="menubar">
           <button className="p-2 rounded-lg md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,28 +33,14 @@ function Nav() {
               />
             </svg>
           </button>
-          <div className="hidden group-hover:block md:block absolute md:static bg-white inset-x-0 top-16 py-3 shadow-md md:shadow-none text-gray-600">
-            <div className="flex flex-row justify-center items-center text-center font-semibold text-gray-500">
-              <div
-                className="px-6 py-1 flex flex-col md:flex-row md:items-center"
-                href="#"
-              >
-                <Link href="/">Home </Link>
-              </div>
-              <div
-                className="px-6 py-1 flex flex-col md:flex-row md:items-center"
-                href="#"
-              >
-                <Link href="/permissions">Permissions </Link>
-              </div>
-              <div
-                className="px-6 py-1 flex flex-col md:flex-row md:items-center"
-                href="#"
-              >
-                <Link href="/help">Help</Link>
-              </div>
-            </div>
-          </div>
+
+          <ul className='navul'>
+            <li><Link href="/"><a>Home</a></Link></li>
+            <li><Link href="/permissions"><a>Permissions</a></Link></li>
+          </ul>
+            
+        
+
         </div>
       </div>
     </nav>

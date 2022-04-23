@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function HomeBody() {
   return (
-    <div className="flex flex-col md:flex-row p-3 min-h-screen md:8">
+    <div className="container">
       <div className="flex-1 p-8">
         <div className="my-4 md:my-8">
           <h1>

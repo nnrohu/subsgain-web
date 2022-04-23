@@ -1,0 +1,25 @@
+.footer{ width: 100%; background: #333; color:#fff; display: flex; text-align: center; padding:20px 15px; }
+.footer p{ font-size: 14px;}
+.container{ width: 1260px; margin: auto;}
+.footer p span{ margin-left: 15px; display: inline-flex; flex-wrap: wrap; border-left: 1px solid #fff; padding-left: 10px;}
+.footer p span a{ margin: 0 5px;}
+
+.header{ width: 100%; box-shadow: 0 0 10px #ddd;}
+.logo{ color:#D61B26}
+.logo a{ display: flex; align-items: center;}
+.logo a span {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.header .container{ display: flex; justify-content: space-between; align-items: center;}
+.menubar{ display: flex;}
+.navul{ display: flex;}
+.navul li{ margin-right: 15px;}
+
+#__next{ display: flex; flex-direction: column; min-height: 100%;}
+.middleLayout{flex-grow :1; width: 100%;}
+
+*{margin: 0px; padding: 0px; box-sizing: border-box; list-style: none;}
+
+body, html{ width: 100%; height: 100%;}
