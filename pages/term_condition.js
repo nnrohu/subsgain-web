@@ -4,7 +4,7 @@ function TermAndCondition() {
   return (
     <div className="container">
       <Meta title="TermAndCondition" />
-      <div>
+      <div className='termpriv'>
         <p>
           <strong>Terms &amp; Conditions</strong>
         </p>

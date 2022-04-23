@@ -4,7 +4,7 @@ function PrivacyPolicy() {
   return (
     <div className="container">
       <Meta title="PrivacyPolicy" />
-      <div>
+      <div className='termpriv'>
         <p>
           <strong>Privacy Policy</strong>
         </p>

@@ -26,3 +26,7 @@ body, html{ width: 100%; height: 100%;}
 .homepageCntr{ width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;}
 .lefthome{ width: 55%;}
 .righthome{ width: 40%;}
+
+.termpriv{ width: 100%; padding: 35px 0;}
+.termpriv p strong{ display: block; padding-bottom: 10px;}
+.termpriv p{ padding: 15px 0 0px 0;}
