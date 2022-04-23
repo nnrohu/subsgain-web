@@ -4,7 +4,8 @@ import Image from 'next/image'
 function HomeBody() {
   return (
     <div className="container">
-      <div className="flex-1 p-8">
+      <div className="homepageCntr">
+      <div className="lefthome">
         <div className="my-4 md:my-8">
           <h1>
             Subs Gain | Boost Subscriber offers a platform to share videos and
@@ -40,7 +41,7 @@ function HomeBody() {
           </h1>
         </div>
       </div>
-      <div className="flex-1 max-w-screen-lg mx-auto item-center">
+      <div className="righthome">
         
           <Link href="https://play.google.com/store/apps/details?id=com.legit.subsgain">
             <a>
@@ -52,6 +53,7 @@ function HomeBody() {
               />
             </a>
           </Link>
+      </div>
       </div>
     </div>
   )

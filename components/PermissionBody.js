@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 function PermissionBody() {
   return (
-    <div className="flex flex-col md:flex-row p-3 md:8 min-h-screen">
-      <div className="flex-1  ">
+    <div className="homepageCntr">
+      <div className="lefthome">
         
         <div className="my-4 md:my-8">
           <h1 className="text-lg font-bold">Google Account</h1>
@@ -22,7 +22,7 @@ function PermissionBody() {
         </div>
        
       </div>
-      <div className="flex-1 max-w-screen-lg mx-auto item-center">
+      <div className="righthome">
         <Link href="https://play.google.com/store/apps/details?id=com.legit.subsgain">
           <a>
             <img
