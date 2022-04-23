@@ -2,9 +2,9 @@ import Meta from '../components/Meta'
 
 function TermAndCondition() {
   return (
-    <div className="flex p-8">
+    <div className="container">
       <Meta title="TermAndCondition" />
-      <div>
+      <div className='termpriv'>
         <p>
           <strong>Terms &amp; Conditions</strong>
         </p>

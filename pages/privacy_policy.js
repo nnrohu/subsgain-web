@@ -2,9 +2,9 @@ import Meta from '../components/Meta'
 
 function PrivacyPolicy() {
   return (
-    <div className="flex p-8">
+    <div className="container">
       <Meta title="PrivacyPolicy" />
-      <div>
+      <div className='termpriv'>
         <p>
           <strong>Privacy Policy</strong>
         </p>
