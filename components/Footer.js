@@ -2,14 +2,12 @@ import Link from 'next/link'
 
 function Footer() {
   return (
-    <div className="flex bg-gray-100 absolute  w-full flex-col justify-center p-4">
-      <div className="flex text-center justify-around flex-row">
-        <Link href="/privacy_policy">Privacy</Link>
-        <Link href="/term_condition">Terms &amp; Conditions</Link>
-      </div>
-      <div className="text-center mt-4">
-        <h1>&copy; 2021 Subs Gain</h1>
-      </div>
+    <div className="footer">
+      <div className='container'>
+      <p>Copyright &copy; 2022 SubsGain <span>
+        <Link href="/privacy_policy"><a>Privacy Policy</a></Link>
+        <Link href="/term_condition"><a>Terms &amp; Conditions</a></Link> <Link href="/help"><a>Help</a></Link></span></p>
+        </div>
     </div>
   )
 }
