@@ -24,7 +24,7 @@ function PermissionBody() {
       </div>
       <div className="righthome">
         <Link href="https://play.google.com/store/apps/details?id=com.legit.subsgain">
-          <a>
+          <a target="_blank">
             <img
               src="/get_it_on_google_play.png"
               alt="download from google play"
