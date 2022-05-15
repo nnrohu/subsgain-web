@@ -34,6 +34,20 @@ body, html{ width: 100%; height: 100%;}
 .menubarClick{ display: none;}
 .mobs{ display: none;}
 
+.userIup{ width: 100%; padding: 30px 0;}
+.userInn{ display: flex; flex-wrap: wrap; align-items: center; width: 100%; padding: 0px 0 20px 0; border-bottom: 1px solid #ddd; }
+.userInnLab{ width: 30%; background: #999;  display: flex;}
+.alink{ width: 50%; margin-left: 3%; font-size: 24px; color:#D61B26}
+.userIup section{ width: 100%; padding: 30px 0 0 0;}
+.userIup section h1{ font-size: 25px; font-weight: 700;}
+.userIup section ul{ margin: 0px; display: flex; flex-wrap: wrap; padding: 20px 0 0 0;}
+.userIup section ul li{ width: 50%; position: relative; padding: 0 0 10px 30px; font-size: 18px;}
+.userIup section ul li::after{ content: ""; position: absolute; left: 0px; top:10px; width: 10px; height: 10px; border-radius: 50%; background: #000;}
+.coinHeader{ width: 100%; background: #D61B26; padding: 10px 0; font-size: 18px;}
+.coinHeader span{ color: #fff;}
+.coinHeader .container{ justify-content: space-between; align-items: center; display: flex; flex-wrap: wrap;}
+.coinHeader button{ height: 45px; background: #333; color:#fff; padding: 0 20px; border-radius: 8px;}
+
 @media screen and (max-width: 1260px) {
     .container{ max-width: 100%; width: 100%; padding: 0 20px;}
 }
