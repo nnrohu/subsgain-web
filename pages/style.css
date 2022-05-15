@@ -31,8 +31,30 @@ body, html{ width: 100%; height: 100%;}
 .termpriv p strong{ display: block; padding-bottom: 10px;}
 .termpriv p{ padding: 15px 0 0px 0;}
 
+.menubarClick{ display: none;}
+.mobs{ display: none;}
+
 @media screen and (max-width: 1260px) {
     .container{ max-width: 100%; width: 100%; padding: 0 20px;}
+}
+
+@media screen and (max-width: 900px) {
+    .menubarClick{ display: block;}
+    .desk{ display: none;}
+    .mobs{ display: block;}
+    .header .container{ flex-wrap: wrap;}
+    .navul {
+        width: 100%;
+        border-top: 1px dotted #ddd;
+        margin: 10px 0;
+        padding: 5px 0 0 0;
+    }
+    .navul li {
+        margin-right: 0px;
+        border-bottom: 1px dotted #ddd;
+        padding: 6px 0;
+    }
+    .navul li:last-child{ border: 0px;}
 }
 
 @media screen and (max-width: 600px) {

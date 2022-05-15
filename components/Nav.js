@@ -1,7 +1,14 @@
 import Link from 'next/link'
 import Image from "next/image";
 import logo from "../public/logo.png"
+import { useState } from 'react';
+import { useEffect } from 'react/cjs/react.production.min';
 function Nav() {
+  const [open, setOpen] = useState(false);
+
+
+
+  // console.log("width", width)
   return (
     <nav className="header">
     <div className="container">
@@ -20,7 +27,7 @@ function Nav() {
         </Link>
         </div>
         <div className="menubar">
-          <button className="p-2 rounded-lg md:hidden">
+          <button onClick={()=> setOpen(!open)} className="menubarClick">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -34,14 +41,19 @@ function Nav() {
             </svg>
           </button>
 
-          <ul className='navul'>
+          <ul className='navul desk'>
             <li><Link href="/"><a>Home</a></Link></li>
             <li><Link href="/permissions"><a>Permissions</a></Link></li>
           </ul>
-            
-        
 
         </div>
+        
+        {open && <ul className='navul mobs'>
+            <li><Link href="/"><a>Home</a></Link></li>
+            <li><Link href="/permissions"><a>Permissions</a></Link></li>
+          </ul>
+            }
+
       </div>
     </nav>
   )
