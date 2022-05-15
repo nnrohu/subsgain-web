@@ -69,6 +69,7 @@ body, html{ width: 100%; height: 100%;}
         padding: 6px 0;
     }
     .navul li:last-child{ border: 0px;}
+    .alink{ font-size: 18px;}
 }
 
 @media screen and (max-width: 600px) {
@@ -85,4 +86,6 @@ body, html{ width: 100%; height: 100%;}
     .termpriv{ padding-top: 10px;}
     .footer{ padding:15px 0px;}
     .footer p span{ margin: 0px; width: 100%; border-left: 0px;}
+    .alink{ width: 67%; font-size: 16px;}
+    .userIup section ul li{ width: 100%; font-size: 16px;}
 }
