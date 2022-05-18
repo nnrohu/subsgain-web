@@ -1,28 +1,51 @@
-import 'tailwindcss/tailwind.css'
-import Layout from '../components/Layout'
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import "../pages/style.css"
+import 'tailwindcss/tailwind.css';
+import Layout from '../components/Layout';
+import '../pages/style.css';
+import { useEffect } from 'react';
+import Script from 'next/script';
+import { useRouter } from 'next/router';
+import * as gtag from '../lib/gtag';
 function MyApp({ Component, pageProps }) {
-
-  // const firebaseConfig = {
-  //   apiKey: "AIzaSyC4UaDklZyBv7cI0KpC9CjqffxFg_luJoA",
-  //   authDomain: "legit-subsgain.firebaseapp.com",
-  //   projectId: "legit-subsgain",
-  //   storageBucket: "legit-subsgain.appspot.com",
-  //   messagingSenderId: "173945245363",
-  //   appId: "1:173945245363:web:3e6f3b5a172c51c7ceeac6",
-  //   measurementId: "G-XT37WY2RHH"
-  // };
-
-  // const app = initializeApp(firebaseConfig);
-  // const analytics = getAnalytics(app);
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on('hashChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off('hashChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+    <>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        strategy='afterInteractive'
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+      />
+      <Script
+        id='gtag-init'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
+
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
