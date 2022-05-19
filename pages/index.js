@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Meta title='Home' />
-      <AdBanner />
+      {/* <AdBanner /> */}
       <HomeBody />
     </div>
   );

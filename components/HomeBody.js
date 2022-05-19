@@ -1,82 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { app } from '../src/config/firebaseConfig';
-
-import {
-  getAuth,
-  signInWithCredential,
-  GoogleAuthProvider,
-} from 'firebase/auth';
+import { app } from '../config/firebaseConfig';
+import React, { useEffect } from 'react';
+import { useAuth } from '../context/AuthContext';
 
 function HomeBody() {
-  // const oauth2Client = new google.auth.OAuth2(
-  //   process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
-  //   process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
-  //   'https://www.subsgain.in/help'
-  // );
+  const { user, login, logout } = useAuth();
+  console.log(user);
 
-  const scopes = ['https://www.googleapis.com/auth/youtube.readonly'];
-
-  // const url = oauth2Client.generateAuthUrl({
-  //   // 'online' (default) or 'offline' (gets refresh_token)
-  //   access_type: 'offline',
-
-  //   // If you only need one scope you can pass it as a string
-  //   scope: scopes,
-  // });
-
-  // const initClient = () => {
-  //   gapi.client
-  //     .init({
-  //       apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  //       clientId:
-  //         '173945245363-gsed416svvqc7ku5bmu81vsdequu5mhd.apps.googleusercontent.com',
-  //       scope: 'https://www.googleapis.com/auth/youtube.readonly',
-  //       discoveryDocs: [
-  //         'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest',
-  //       ],
-  //     })
-  //     .then(function () {
-  //       GoogleAuth = gapi.auth2.getAuthInstance();
-
-  //       // Listen for sign-in state changes.
-  //       GoogleAuth.isSignedIn.listen(updateSigninStatus);
-  //     });
-  // };
-
-  // const provider = new GoogleAuthProvider();
-  // const auth = getAuth(app);
-
-  // provider.addScope('https://www.googleapis.com/auth/youtube.readonly');
-
-  const signIn = async () => {
-    // const response = await signInWithCredential(auth, provider)
-    //   .then((result) => {
-    //     // This gives you a Google Access Token. You can use it to access the Google API.
-    //     const credential = GoogleAuthProvider.credentialFromResult(result);
-    //     const token = credential.accessToken;
-    //     // The signed-in user info.
-    //     const user = result.user;
-    //     // ...
-    //   })
-    //   .catch((error) => {
-    //     // Handle Errors here.
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
-    //     // The email of the user's account used.
-    //     const email = error.email;
-    //     // The AuthCredential type that was used.
-    //     const credential = GoogleAuthProvider.credentialFromError(error);
-    //     // ...
-    //   });
-    // const res = await GoogleAuth.signIn();
-    // console.log('res', gapi);
-    // let gapiClient = loadClientAuth2(
-    //   gapi,
-    //   process.env.NEXT_GOOGLE_CLIENT_ID,
-    //   scopes
-    // );
-  };
   return (
     <div className='container'>
       <div className='homepageCntr'>
