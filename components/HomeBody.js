@@ -3,15 +3,37 @@ import Image from 'next/image';
 import { app } from '../config/firebaseConfig';
 import React, { useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useRouter } from 'next/router';
 
 function HomeBody() {
   const { user, login, logout } = useAuth();
-  console.log(user);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user) {
+      router.push('/home');
+    }
+  }, [user]);
 
   return (
     <div className='container'>
       <div className='homepageCntr'>
         <div className='lefthome'>
+          <div>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                console.log('login');
+                try {
+                  login();
+                } catch (e) {}
+              }}
+            >
+              Login
+            </button>
+          </div>
+
           <div className='my-4 md:my-8'>
             <h1>
               Subs Gain | Boost Subscriber offers a platform to share videos and
